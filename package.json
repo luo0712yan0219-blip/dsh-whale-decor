@@ -1,0 +1,48 @@
+{
+  "name": "dsh-whale-decor",
+  "version": "0.1.0",
+  "description": "Deep-sea whale-blue reskin for the DSH Web GUI: 14 theme tokens (light and dark), five whale-tail-maid placements, a clock and weather card, and a collapsible hardware readout. | 给 DSH Web GUI 的深海鲸蓝换肤：14 个主题 token、5 处鲸尾女仆角色元素、时钟与天气卡片，以及可上下伸缩的硬件状态悬浮窗。",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "lib/client.js",
+    "assets/files/",
+    "assets/index.json",
+    "assets/ATTRIBUTION.md",
+    "assets/dsh-pet-LICENSE.txt",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "client": {
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "theme",
+    "skin",
+    "decoration",
+    "ui"
+  ],
+  "author": "RIAN",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/host.test.mjs && node test/client.test.mjs"
+  }
+}

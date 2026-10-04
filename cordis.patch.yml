@@ -1,0 +1,5 @@
+# Loader insert for this bundle. The id must stay stable: it is what the profile
+# patch layer, the plugin manager, and `dsh plugin` all address.
+- insert:
+    - id: dsh-whale-decor
+      name: dsh-whale-decor

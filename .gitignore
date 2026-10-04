@@ -1,0 +1,11 @@
+# 打包/安装产物，不该进仓库
+node_modules/
+*.tgz
+*.zip
+
+# 编辑器与系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

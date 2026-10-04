@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "revision": "0a186f0f6210",
+  "generatedBy": "tools/build-assets.py",
+  "attribution": {
+    "character": "whale-tail maid",
+    "upstream": "PC2005-cloud/dsh-pet",
+    "license": "MIT",
+    "via": "dsh-pet assets/webm (re-encoded to webp frames)"
+  },
+  "floatFrameMs": 336,
+  "files": {
+    "avatar.webp": {
+      "type": "image/webp"
+    },
+    "float/000.webp": {
+      "type": "image/webp"
+    },
+    "float/001.webp": {
+      "type": "image/webp"
+    },
+    "float/002.webp": {
+      "type": "image/webp"
+    },
+    "float/003.webp": {
+      "type": "image/webp"
+    },
+    "float/004.webp": {
+      "type": "image/webp"
+    },
+    "float/005.webp": {
+      "type": "image/webp"
+    },
+    "float/006.webp": {
+      "type": "image/webp"
+    },
+    "float/007.webp": {
+      "type": "image/webp"
+    },
+    "float/008.webp": {
+      "type": "image/webp"
+    },
+    "float/009.webp": {
+      "type": "image/webp"
+    },
+    "float/010.webp": {
+      "type": "image/webp"
+    },
+    "float/011.webp": {
+      "type": "image/webp"
+    },
+    "float/012.webp": {
+      "type": "image/webp"
+    },
+    "float/013.webp": {
+      "type": "image/webp"
+    },
+    "float/014.webp": {
+      "type": "image/webp"
+    },
+    "float/015.webp": {
+      "type": "image/webp"
+    },
+    "float/016.webp": {
+      "type": "image/webp"
+    },
+    "float/017.webp": {
+      "type": "image/webp"
+    },
+    "float/018.webp": {
+      "type": "image/webp"
+    },
+    "float/019.webp": {
+      "type": "image/webp"
+    },
+    "float/020.webp": {
+      "type": "image/webp"
+    },
+    "float/021.webp": {
+      "type": "image/webp"
+    },
+    "float/022.webp": {
+      "type": "image/webp"
+    },
+    "float/023.webp": {
+      "type": "image/webp"
+    },
+    "float/024.webp": {
+      "type": "image/webp"
+    },
+    "float/025.webp": {
+      "type": "image/webp"
+    },
+    "float/026.webp": {
+      "type": "image/webp"
+    },
+    "float/027.webp": {
+      "type": "image/webp"
+    },
+    "float/028.webp": {
+      "type": "image/webp"
+    },
+    "float/029.webp": {
+      "type": "image/webp"
+    },
+    "float/030.webp": {
+      "type": "image/webp"
+    },
+    "hero.webp": {
+      "type": "image/webp"
+    },
+    "sticker-eat.webp": {
+      "type": "image/webp"
+    },
+    "sticker-happy.webp": {
+      "type": "image/webp"
+    }
+  }
+}
