@@ -12,8 +12,10 @@
 ## 安装
 
 ```
-dsh plugin --profile <你的 profile> add dsh-whale-decor
+dsh plugin --profile web add github:luo0712yan0219-blip/dsh-whale-decor
 ```
+
+`--profile` 换成你自己的 profile 名（Web 版一般是 `web`，桌面版一般是 `desktop`）。
 
 装完在 **设置 → 插件** 里启用，再刷新页面。侧栏底部有装饰总开关，可整体关掉。
 

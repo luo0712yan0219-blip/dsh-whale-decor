@@ -42,25 +42,28 @@ Copyright (c) 2026 RIAN
 版权行与作者名一致就是标准做法 —— 版权持有者即作者本人。
 **tgz 已按这两个值重打过并解包核对过**，先生不需要再动。
 
-## 还差一件事：GitHub 仓库
+## GitHub 仓库（已建）
 
-市场条目需要一个 GitHub 地址，所以**建仓库是进市场的前置条件**。
-**现在先不加 `repository` 字段**：npm 会校验这个 URL，填了占位符会让 `npm publish`
-直接失败，而不填是完全合法的。
+**https://github.com/luo0712yan0219-blip/dsh-whale-decor** —— 公开，50 个文件，`main` 已推送。
 
-仓库建好后，把下面两行加进 `package.json`（我可以一条命令加上）。
-注意 `<你的 GitHub 用户名>` 要换成**账号名**，它不一定与作者名 `RIAN` 相同：
+`package.json` 里的 `repository` / `homepage` / `bugs` 已按真实地址填好：
 
 ```jsonc
-"repository": { "type": "git", "url": "git+https://github.com/<你的 GitHub 用户名>/dsh-whale-decor.git" },
-"homepage": "https://github.com/<你的 GitHub 用户名>/dsh-whale-decor#readme",
+"repository": { "type": "git", "url": "git+https://github.com/luo0712yan0219-blip/dsh-whale-decor.git" },
+"homepage": "https://github.com/luo0712yan0219-blip/dsh-whale-decor#readme",
+```
+
+别人这样装：
+
+```
+dsh plugin --profile <profile> add github:luo0712yan0219-blip/dsh-whale-decor
 ```
 
 > `dsh-whale-decor` **这个名字在 npm 上可用**（已查，404）。npm 名字先到先得，建议尽早占。
 
 ## 三条发布途径（任选，可叠加）
 
-### A. 发到 npm（市场 install 命令最简洁）
+### A. 发到 npm（**本机大概走不通**）
 
 ```sh
 cd dsh-whale-decor-publish
@@ -69,18 +72,26 @@ npm publish            # 会自动重新打包，用的就是 files 白名单
 
 装：`dsh plugin --profile <profile> add dsh-whale-decor`
 
-### B. 推到 GitHub
+> ⚠️ **npm 走 Node 的 TLS，正是这台网络会重置的那个**（Node 连 api.github.com 报
+> `ECONNRESET`，而 PowerShell 0.25 秒握手成功）。所以在本机 `npm publish` 很可能失败。
+> 换一台网络正常的机器发，或走 GitHub —— **市场支持纯 GitHub 安装，不影响收录**。
 
-```sh
-cd dsh-whale-decor-publish
-git init && git add -A
-git commit -m "dsh-whale-decor 0.1.0"
-git branch -M main
-git remote add origin https://github.com/<你的用户名>/dsh-whale-decor.git
-git push -u origin main
+### B. GitHub —— **已完成**
+
+```
+https://github.com/luo0712yan0219-blip/dsh-whale-decor
+main = 4603f4c  dsh-whale-decor 0.1.0
 ```
 
-装：`dsh plugin --profile <profile> add github:<你的用户名>/dsh-whale-decor`
+装：`dsh plugin --profile <profile> add github:luo0712yan0219-blip/dsh-whale-decor`
+
+> **本机推送的两个坑（都踩过）**，换机器或重装后可能再遇到：
+> 1. **`gh` 用不了**：它是 Go 程序，这台网络会重置 Go/Node 的 TLS 握手，而
+>    SChannel（PowerShell/.NET）和 libcurl（git）不会。设备码登录永远走不完。
+> 2. **凭据助手要用 `GIT_ASKPASS`**：PortableGit 自带的 Credential Manager 期望
+>    .NET Framework 4.7.2，在这台机器上**启动即崩**。所以推送时加
+>    `-c credential.helper=` 清空助手链，由 `GIT_ASKPASS` 提供令牌。
+> 3. 连接**时好时坏**（同一分钟内 3 秒成功 / 21 秒超时都出现过），失败就重试。
 
 ### C. 用现成的 tgz
 
@@ -105,7 +116,7 @@ registry 就是一份 README，按分类列条目，格式：
 **先生这条（草稿，可直接粘贴）** —— 归到 **Themes & Appearance**：
 
 ```md
-- [<你的用户名>/dsh-whale-decor](https://github.com/<你的用户名>/dsh-whale-decor) - Deep-sea whale-blue reskin for the DSH Web GUI: 14 theme tokens in light and dark, five whale-tail-maid placements, a clock and weather card, and a collapsible hardware readout (CPU, memory, GPU, per-drive temperatures via HWiNFO). No backdrop image is bundled; drop your own in. MIT code, MIT character art.
+- [luo0712yan0219-blip/dsh-whale-decor](https://github.com/luo0712yan0219-blip/dsh-whale-decor) - Deep-sea whale-blue reskin for the DSH Web GUI: 14 theme tokens in light and dark, five whale-tail-maid placements, a clock and weather card, and a collapsible hardware readout (CPU, memory, GPU, per-drive temperatures via HWiNFO). No backdrop image is bundled; drop your own in. MIT code, MIT character art.
 ```
 
 **收录门槛**（原文）：`dsh plugin add` 装得上、一行描述与实物相符、分类正确、有人维护。

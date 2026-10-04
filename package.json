@@ -39,6 +39,14 @@
   ],
   "author": "RIAN",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luo0712yan0219-blip/dsh-whale-decor.git"
+  },
+  "homepage": "https://github.com/luo0712yan0219-blip/dsh-whale-decor#readme",
+  "bugs": {
+    "url": "https://github.com/luo0712yan0219-blip/dsh-whale-decor/issues"
+  },
   "engines": {
     "node": ">=18"
   },
